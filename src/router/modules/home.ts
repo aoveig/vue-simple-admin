@@ -1,6 +1,9 @@
+import AppLayout from "@/layout/index.vue";
+
 export default {
   path: "/",
   name: "Home",
+  component: AppLayout,
   redirect: "/welcome",
   children: [
     {
