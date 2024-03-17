@@ -27,3 +27,8 @@ pnpm dev     // 启动项目
 ```
 pnpm add @iconify-icons/ep -D
 ```
+
+## 组件库
+
+采用了 element-plus 组件库
+导入方式为按需导入
