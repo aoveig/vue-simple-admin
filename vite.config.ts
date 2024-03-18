@@ -2,8 +2,6 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "node:path";
 
-import UnoCSS from "unocss/vite";
-
 // 引入 element-plus 按需导入插件
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -24,7 +22,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    UnoCSS(),
     AutoImport({
       resolvers: [ElementPlusResolver()]
     }),

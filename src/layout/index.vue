@@ -1,9 +1,18 @@
+<script setup lang="ts">
+import appContent from "./components/appContent.vue";
+import vertical from "./components/sidebar/vertical.vue";
+</script>
+
 <template>
   <div class="app-layout flex">
-    <div class="app-layout_aside"></div>
-    <div class="app-layout_container flex-1">
-      <div class="app-layout_header"></div>
-      <div class="app-layout_main"></div>
+    <div class="app-layout_aside">
+      <vertical />
+    </div>
+    <div class="app-layout_container bg-[#f3f4f5] flex-1">
+      <div class="app-layout_header frosted-glass"></div>
+      <div class="app-layout_main">
+        <appContent />
+      </div>
     </div>
   </div>
 </template>
@@ -16,7 +25,7 @@
   .app-layout_aside {
     width: 210px;
     height: 100%;
-    box-shadow: 1px 0px 1px #eee;
+    border-right: 1px solid #eee;
   }
 
   .app-layout_container {
@@ -27,12 +36,9 @@
     .app-layout_header {
       width: 100%;
       height: 50px;
-      box-shadow: 0px 1px 1px #eee;
+      border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
-      background: rgba($color: #fff, $alpha: 0.6);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
     }
 
     .app-layout_main {
